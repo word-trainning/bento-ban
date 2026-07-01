@@ -1,0 +1,57 @@
+<!doctype html><html lang='ja'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex,nofollow'>
+<title>bento-ban ダッシュボード</title>
+<script src='assets/gate.js'></script>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap' rel='stylesheet'>
+<style>
+  * { box-sizing:border-box; }
+  body { font-family:'Noto Sans JP',sans-serif; color:#1f2328; font-size:13px; line-height:1.6;
+         margin:0; background:#f2f3f5; }
+  .wrap { max-width:900px; margin:0 auto; padding:22px 18px 60px; }
+  header.top { border-bottom:3px solid #b5121b; padding-bottom:10px; margin-bottom:16px; }
+  header.top h1 { font-size:24px; margin:0 0 2px; color:#b5121b; letter-spacing:.02em; }
+  header.top .tag { color:#57606a; font-size:12px; }
+  header.top .sub { color:#8b949e; font-size:11px; margin-top:4px; }
+  .demo { background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00; padding:6px 10px;
+           border-radius:6px; font-size:11px; margin-top:8px; }
+  h2 { font-size:15px; border-left:5px solid #b5121b; padding-left:9px; margin:22px 0 10px; }
+  section { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+  .cards { display:flex; flex-wrap:wrap; gap:9px; }
+  .card { flex:1 1 30%; background:#f6f8fa; border:1px solid #e1e4e8; border-radius:8px; padding:11px 13px; }
+  .card .n { font-size:20px; font-weight:700; color:#b5121b; }
+  .card .l { font-size:11px; color:#57606a; }
+  table.bars { width:100%; border-collapse:collapse; }
+  table.bars td { padding:3px 4px; vertical-align:middle; }
+  table.bars .bl { width:28%; text-align:right; padding-right:8px; }
+  table.bars .bc { width:52%; }
+  table.bars .bv { width:20%; text-align:right; font-variant-numeric:tabular-nums; }
+  .bar { height:14px; background:linear-gradient(90deg,#b5121b,#e0555c); border-radius:3px; min-width:2px; }
+  .muted { color:#8b949e; }
+  footer { margin-top:20px; font-size:10px; color:#8b949e; text-align:center; }
+</style></head><body><div class='wrap'>
+<header class='top'>
+  <h1>bento-ban</h1>
+  <div class='tag'>弁当店向け 受注分析ダッシュボード</div>
+  <div class='sub'>集計期間 2024-01-09 〜 2026-06-30 ｜ 生成 2026-07-02</div>
+  <div class='demo'>本ダッシュボードは集計統計のみを表示します（顧客名・連絡先など個人情報は含みません）。関係者限定。</div>
+</header>
+<section><h2>総括</h2>
+    <div class='cards'>
+      <div class='card'><div class='n'>1,171</div><div class='l'>受注件数</div></div>
+      <div class='card'><div class='n'>¥23,401,253</div><div class='l'>売上合計</div></div>
+      <div class='card'><div class='n'>¥19,984</div><div class='l'>平均単価</div></div>
+      <div class='card'><div class='n'>592</div><div class='l'>取引顧客数</div></div>
+      <div class='card'><div class='n'>172</div><div class='l'>リピート顧客(2回+)</div></div>
+      <div class='card'><div class='n'>36</div><div class='l'>キャンセル件数</div></div>
+    </div></section>
+<section><h2>月次売上推移 (直近12ヶ月)</h2><table class='bars'><tr><td class='bl'>2025-07</td><td class='bc'><div class='bar' style='width:32.1%'></div></td><td class='bv'>¥652,203</td></tr><tr><td class='bl'>2025-08</td><td class='bc'><div class='bar' style='width:42.8%'></div></td><td class='bv'>¥869,153</td></tr><tr><td class='bl'>2025-09</td><td class='bc'><div class='bar' style='width:37.7%'></div></td><td class='bv'>¥764,406</td></tr><tr><td class='bl'>2025-10</td><td class='bc'><div class='bar' style='width:77.5%'></div></td><td class='bv'>¥1,571,617</td></tr><tr><td class='bl'>2025-11</td><td class='bc'><div class='bar' style='width:78.5%'></div></td><td class='bv'>¥1,593,159</td></tr><tr><td class='bl'>2025-12</td><td class='bc'><div class='bar' style='width:39.1%'></div></td><td class='bv'>¥793,575</td></tr><tr><td class='bl'>2026-01</td><td class='bc'><div class='bar' style='width:22.1%'></div></td><td class='bv'>¥449,125</td></tr><tr><td class='bl'>2026-02</td><td class='bc'><div class='bar' style='width:43.8%'></div></td><td class='bv'>¥888,589</td></tr><tr><td class='bl'>2026-03</td><td class='bc'><div class='bar' style='width:71.4%'></div></td><td class='bv'>¥1,448,427</td></tr><tr><td class='bl'>2026-04</td><td class='bc'><div class='bar' style='width:84.8%'></div></td><td class='bv'>¥1,720,085</td></tr><tr><td class='bl'>2026-05</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥2,029,000</td></tr><tr><td class='bl'>2026-06</td><td class='bc'><div class='bar' style='width:85.1%'></div></td><td class='bv'>¥1,726,724</td></tr></table></section>
+<section><h2>ブランド別 売上</h2><table class='bars'><tr><td class='bl'>ブランドA</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥21,981,617</td></tr><tr><td class='bl'>ブランドB</td><td class='bc'><div class='bar' style='width:6.5%'></div></td><td class='bv'>¥1,419,636</td></tr></table></section>
+<section><h2>支払方法別 売上</h2><table class='bars'><tr><td class='bl'>請求書</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥9,495,179</td></tr><tr><td class='bl'>クレジットカード（Web決済）</td><td class='bc'><div class='bar' style='width:66.4%'></div></td><td class='bv'>¥6,307,254</td></tr><tr><td class='bl'>現金</td><td class='bc'><div class='bar' style='width:64.3%'></div></td><td class='bv'>¥6,102,221</td></tr><tr><td class='bl'>法人（ポータル一括精算）※客先請求NG</td><td class='bc'><div class='bar' style='width:15.8%'></div></td><td class='bv'>¥1,496,599</td></tr></table></section>
+<section><h2>顧客タイプ別 売上</h2><table class='bars'><tr><td class='bl'>法人</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥18,725,036</td></tr><tr><td class='bl'>施設</td><td class='bc'><div class='bar' style='width:9.2%'></div></td><td class='bv'>¥1,713,847</td></tr><tr><td class='bl'>個人</td><td class='bc'><div class='bar' style='width:8.8%'></div></td><td class='bv'>¥1,653,002</td></tr><tr><td class='bl'>撮影現場</td><td class='bc'><div class='bar' style='width:7.0%'></div></td><td class='bv'>¥1,309,368</td></tr></table></section>
+<section><h2>業種別 売上 (上位)</h2><table class='bars'><tr><td class='bl'>TV局・撮影</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥1,327,728</td></tr><tr><td class='bl'>公的機関</td><td class='bc'><div class='bar' style='width:47.5%'></div></td><td class='bv'>¥631,054</td></tr><tr><td class='bl'>病院</td><td class='bc'><div class='bar' style='width:45.3%'></div></td><td class='bv'>¥600,890</td></tr><tr><td class='bl'>製薬</td><td class='bc'><div class='bar' style='width:44.6%'></div></td><td class='bv'>¥591,835</td></tr><tr><td class='bl'>学校</td><td class='bc'><div class='bar' style='width:37.5%'></div></td><td class='bv'>¥498,103</td></tr><tr><td class='bl'>金融</td><td class='bc'><div class='bar' style='width:34.4%'></div></td><td class='bv'>¥457,255</td></tr><tr><td class='bl'>製造</td><td class='bc'><div class='bar' style='width:32.0%'></div></td><td class='bv'>¥424,588</td></tr><tr><td class='bl'>建設・不動産</td><td class='bc'><div class='bar' style='width:31.1%'></div></td><td class='bv'>¥413,006</td></tr><tr><td class='bl'>IT</td><td class='bc'><div class='bar' style='width:16.9%'></div></td><td class='bv'>¥224,640</td></tr><tr><td class='bl'>士業</td><td class='bc'><div class='bar' style='width:15.9%'></div></td><td class='bv'>¥211,038</td></tr></table></section>
+<section><h2>地域(区)別 売上 (上位)</h2><table class='bars'><tr><td class='bl'>北区</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥5,878,588</td></tr><tr><td class='bl'>中央区</td><td class='bc'><div class='bar' style='width:90.6%'></div></td><td class='bv'>¥5,323,564</td></tr><tr><td class='bl'>住之江区</td><td class='bc'><div class='bar' style='width:36.6%'></div></td><td class='bv'>¥2,152,296</td></tr><tr><td class='bl'>西区</td><td class='bc'><div class='bar' style='width:30.9%'></div></td><td class='bv'>¥1,817,107</td></tr><tr><td class='bl'>此花区</td><td class='bc'><div class='bar' style='width:22.3%'></div></td><td class='bv'>¥1,308,564</td></tr><tr><td class='bl'>港区</td><td class='bc'><div class='bar' style='width:8.8%'></div></td><td class='bv'>¥517,536</td></tr><tr><td class='bl'>福島区</td><td class='bc'><div class='bar' style='width:8.3%'></div></td><td class='bv'>¥490,334</td></tr><tr><td class='bl'>尼崎市</td><td class='bc'><div class='bar' style='width:7.7%'></div></td><td class='bv'>¥455,010</td></tr><tr><td class='bl'>淀川区</td><td class='bc'><div class='bar' style='width:7.0%'></div></td><td class='bv'>¥413,703</td></tr><tr><td class='bl'>天王寺区</td><td class='bc'><div class='bar' style='width:6.7%'></div></td><td class='bv'>¥390,960</td></tr><tr><td class='bl'>堺区</td><td class='bc'><div class='bar' style='width:5.6%'></div></td><td class='bv'>¥328,724</td></tr><tr><td class='bl'>住吉区</td><td class='bc'><div class='bar' style='width:5.2%'></div></td><td class='bv'>¥303,170</td></tr><tr><td class='bl'>尼崎市末広町</td><td class='bc'><div class='bar' style='width:4.8%'></div></td><td class='bv'>¥280,800</td></tr><tr><td class='bl'>都島区</td><td class='bc'><div class='bar' style='width:4.5%'></div></td><td class='bv'>¥266,380</td></tr><tr><td class='bl'>浪速区</td><td class='bc'><div class='bar' style='width:4.4%'></div></td><td class='bv'>¥258,905</td></tr></table></section>
+<section><h2>7〜8月の狙い目業種 (季節性)</h2><table class='bars'><tr><td class='bl'>TV局・撮影（12件）</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>¥263,520</td></tr><tr><td class='bl'>病院（4件）</td><td class='bc'><div class='bar' style='width:30.3%'></div></td><td class='bv'>¥79,880</td></tr><tr><td class='bl'>公的機関（2件）</td><td class='bc'><div class='bar' style='width:23.2%'></div></td><td class='bv'>¥61,080</td></tr><tr><td class='bl'>金融（3件）</td><td class='bc'><div class='bar' style='width:18.0%'></div></td><td class='bv'>¥47,520</td></tr><tr><td class='bl'>建設・不動産（2件）</td><td class='bc'><div class='bar' style='width:14.8%'></div></td><td class='bv'>¥38,880</td></tr><tr><td class='bl'>製造（2件）</td><td class='bc'><div class='bar' style='width:10.7%'></div></td><td class='bv'>¥28,200</td></tr><tr><td class='bl'>製薬（2件）</td><td class='bc'><div class='bar' style='width:10.5%'></div></td><td class='bv'>¥27,540</td></tr></table></section>
+<section><h2>要望タイプ 内訳</h2><table class='bars'><tr><td class='bl'>支払特記</td><td class='bc'><div class='bar' style='width:100.0%'></div></td><td class='bv'>69件</td></tr><tr><td class='bl'>配達方法</td><td class='bc'><div class='bar' style='width:33.3%'></div></td><td class='bv'>23件</td></tr><tr><td class='bl'>アレルギー</td><td class='bc'><div class='bar' style='width:26.1%'></div></td><td class='bv'>18件</td></tr><tr><td class='bl'>駐車/搬入</td><td class='bc'><div class='bar' style='width:14.5%'></div></td><td class='bv'>10件</td></tr><tr><td class='bl'>盛付/量</td><td class='bc'><div class='bar' style='width:14.5%'></div></td><td class='bv'>10件</td></tr><tr><td class='bl'>時間指定</td><td class='bc'><div class='bar' style='width:8.7%'></div></td><td class='bv'>6件</td></tr></table></section>
+<footer>bento-ban — 受注分析ダッシュボード ｜ 集計値のみ・関係者限定</footer>
+</div></body></html>

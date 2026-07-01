@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang='ja'><head><meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex,nofollow'>
+<title>bento-ban｜関係者向け</title>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap' rel='stylesheet'>
+<style>
+  * { box-sizing:border-box; } html,body { height:100%; margin:0; }
+  body { font-family:'Noto Sans JP',sans-serif; background:#1f2328; color:#f7f3ec;
+         display:flex; align-items:center; justify-content:center; padding:24px; line-height:1.8; }
+  .gate { width:100%; max-width:420px; text-align:center; }
+  .logo { font-size:32px; letter-spacing:.06em; color:#e0555c; margin:0 0 4px; font-weight:700; }
+  .sub { font-size:11px; letter-spacing:.3em; opacity:.6; margin:0 0 30px; text-transform:uppercase; }
+  .lead { font-size:14px; opacity:.85; margin:0 0 24px; }
+  form { background:rgba(247,243,236,.06); border:1px solid rgba(247,243,236,.18); padding:26px 22px; border-radius:8px; }
+  label { display:block; font-size:11px; letter-spacing:.3em; color:#c9a55b; margin-bottom:12px; }
+  input { width:100%; padding:12px 14px; background:#f7f3ec; color:#1f2328; border:1px solid #d6cfc1;
+           font-size:16px; margin-bottom:16px; border-radius:4px; }
+  button { width:100%; padding:13px; background:#b5121b; color:#fff; border:0; font-family:inherit;
+            font-size:14px; letter-spacing:.1em; cursor:pointer; border-radius:4px; }
+  button:hover { background:#8b1a1a; }
+  .err { color:#ff9999; font-size:13px; margin-top:12px; min-height:18px; }
+  .note { font-size:11px; opacity:.5; margin-top:26px; }
+</style></head><body>
+<main class='gate'>
+  <p class='logo'>bento-ban</p>
+  <p class='sub'>for authorized members</p>
+  <p class='lead'>関係者限定のダッシュボードです。<br>お渡ししたパスワードを入力してください。</p>
+  <form id='f'>
+    <label for='pw'>PASSWORD</label>
+    <input type='password' id='pw' autocomplete='off' required autofocus>
+    <button type='submit'>入る</button>
+    <p class='err' id='e'></p>
+  </form>
+  <p class='note'>※ 集計統計のみ（個人情報なし）。パスワードは関係者だけにお渡ししています。</p>
+</main>
+<script>
+const EXPECTED='61f4f4b0fd8dfce77ac9d91c0ec5429b47e7cf084d840bb60667893f216859f5';
+async function sha256(t){const b=new TextEncoder().encode(t);const h=await crypto.subtle.digest('SHA-256',b);
+  return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+const f=document.getElementById('f'),e=document.getElementById('e');
+f.addEventListener('submit',async ev=>{ev.preventDefault();e.textContent='';
+  const h=await sha256(document.getElementById('pw').value);
+  if(h===EXPECTED){localStorage.setItem('bentoban_auth',h);location.replace('index.html');}
+  else{e.textContent='パスワードが違います。';document.getElementById('pw').value='';}});
+if(localStorage.getItem('bentoban_auth')===EXPECTED)location.replace('index.html');
+</script></body></html>
