@@ -12,11 +12,20 @@
 <style>
   .chart { width: 100%; height: 420px; }
   .chart-tall { width: 100%; height: 560px; }
+
+#sidenav{position:fixed;top:0;left:0;width:14rem;height:100vh;overflow-y:auto;background:#1f2328;color:#e7e5e4;padding:14px 10px;z-index:50;}
+#sidenav .brand{font-weight:700;color:#e0555c;font-size:20px;padding:4px 10px;font-family:serif;letter-spacing:.05em;}
+#sidenav .menu-label{font-size:10px;letter-spacing:.2em;color:#a8a29e;padding:2px 10px 10px;}
+#sidenav a{display:block;padding:7px 10px;font-size:12.5px;color:#d6d3d1;text-decoration:none;border-radius:6px;border-left:3px solid transparent;}
+#sidenav a:hover{background:#3f3f46;color:#fff;border-left-color:#e0555c;}
+html{scroll-behavior:smooth;}
+@media(max-width:1023px){#sidenav{position:static;width:auto;height:auto;}}
 </style>
 
 </head>
 <body class="bg-stone-50 text-stone-900 min-h-screen">
-<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+<nav id="sidenav"><div class="brand">bento-ban</div><div class="menu-label">総合分析メニュー</div><div id="sidenav-links"></div></nav>
+<main class="lg:ml-56 max-w-6xl px-4 sm:px-6 py-8 space-y-8">
 
 <header class="border-b-4 border-red-700 pb-2 mb-4">
   <h1 class="font-serif text-3xl font-bold text-red-700 tracking-wider">bento-ban</h1>
@@ -24,7 +33,7 @@
   <p class="mt-1 text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded px-2 py-1 inline-block">
     集計統計のみ表示（顧客名・連絡先など個人情報は含みません）。関係者限定。</p>
 </header>
-
+<section id="sec-summary" class="bg-white p-6 border border-stone-200"><h2 class="font-serif text-xl tracking-wider mb-1">分析総括</h2><p class="text-xs text-stone-500 mb-3">集計期間 2024-01-09 〜 2026-06-30（approved受注ベース）</p><div class="grid grid-cols-2 md:grid-cols-3 gap-3"><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">1,171</div><div class="text-xs text-stone-500">受注件数</div></div><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">¥23,401,253</div><div class="text-xs text-stone-500">売上合計</div></div><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">¥19,984</div><div class="text-xs text-stone-500">平均単価</div></div><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">592</div><div class="text-xs text-stone-500">取引顧客数</div></div><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">172</div><div class="text-xs text-stone-500">リピート顧客(2回+)</div></div><div class="bg-stone-50 border border-stone-200 rounded p-3"><div class="text-xl font-bold text-red-700">36</div><div class="text-xs text-stone-500">キャンセル件数</div></div></div></section><section id="sec-sales" class="bg-white p-6 border border-stone-200 space-y-4"><h2 class="font-serif text-xl tracking-wider">営業向け まとめ（これまで と これからの狙い目）</h2><p class="text-xs text-stone-500">数字が苦手でも読めるように、要点だけ言葉でまとめています。</p><div><h3 class="font-serif text-base tracking-wider mb-1">1. これまでの流れ</h3><p class="text-sm text-stone-700">直近6ヶ月の売上は¥8,261,950で、その前の6ヶ月（¥6,244,113）より <b>+32%</b>。伸びています。 取引のあるお客様は592社、そのうち2回以上リピートは172社です。</p></div><div><h3 class="font-serif text-base tracking-wider mb-1">2. 季節のパターン</h3><p class="text-sm text-stone-700">1年を通してみると、売上が高いのは <b>5・10・11月</b>、低いのは <b>1・7月</b>。繁忙期に向けて会議・行事・研修の弁当需要が増える傾向です。ピーク前に定期発注をおさえておくのが効果的です。</p></div><div><h3 class="font-serif text-base tracking-wider mb-1">3. これからの時期（7〜9月）の狙い目業種</h3><p class="text-xs text-stone-500 mb-1">過去の同じ時期に実際に動いていた業種の順です。上から当たると効率的。</p><ul class="text-sm"><li class="py-1 border-b border-stone-100"><b>TV局・撮影</b><span class="text-stone-400 text-xs">（過去15件・¥299,160）</span><br><span class="text-stone-600">→ ロケ・収録のロケ弁を大量手配。急な追加にも即対応をアピール</span></li><li class="py-1 border-b border-stone-100"><b>公的機関</b><span class="text-stone-400 text-xs">（過去6件・¥125,840）</span><br><span class="text-stone-600">→ 会議・研修・選挙事務などの弁当。請求書払い対応を案内</span></li><li class="py-1 border-b border-stone-100"><b>病院</b><span class="text-stone-400 text-xs">（過去6件・¥92,540）</span><br><span class="text-stone-600">→ 会議・研修・当直向けの弁当。衛生・アレルギー対応を前面に</span></li><li class="py-1 border-b border-stone-100"><b>金融</b><span class="text-stone-400 text-xs">（過去5件・¥64,615）</span><br><span class="text-stone-600">→ 研修・株主総会・繁忙期の弁当。定期発注を提案</span></li><li class="py-1 border-b border-stone-100"><b>製造</b><span class="text-stone-400 text-xs">（過去4件・¥55,720）</span><br><span class="text-stone-600">→ 工場の会議・展示会・棚卸し時の食事。まとめ発注を提案</span></li><li class="py-1 border-b border-stone-100"><b>建設・不動産</b><span class="text-stone-400 text-xs">（過去2件・¥38,880）</span><br><span class="text-stone-600">→ 現場・内覧会・完成見学会の弁当。配達エリアの広さを訴求</span></li></ul></div><div><h3 class="font-serif text-base tracking-wider mb-1">4. 今日から動けるアクション</h3><ul class="text-sm list-disc pl-5 space-y-1 text-stone-700"><li>直近3ヶ月に注文があった <b>164社</b> は「今動いている」お客様。継続フォローで取りこぼしを防ぐ。</li><li>3ヶ月以上ご無沙汰だが2回以上頼んでくれた <b>99社</b> は掘り起こしの好機。上の「狙い目業種」に当てはまる先から声かけを。</li></ul></div></section>
   <div class="flex items-baseline justify-between">
     <h2 class="font-serif text-2xl tracking-wider">分析</h2>
     <p class="text-xs text-stone-500">過去のご注文データから自動集計</p>
@@ -858,6 +867,20 @@ function escapeHtml(s) {
     echarts.getInstanceByDom(document.getElementById('chart-payment-line'))?.resize();
     echarts.getInstanceByDom(document.getElementById('chart-rfm'))?.resize();
     echarts.getInstanceByDom(document.getElementById('chart-sankey'))?.resize();
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var box=document.getElementById('sidenav-links');
+  if(!box) return;
+  document.querySelectorAll('main > section').forEach(function(s,i){
+    if(!s.id) s.id='sec-'+i;
+    var h=s.querySelector('h2,h3'); if(!h) return;
+    var label=h.textContent.trim().replace(/\s+/g,' ').slice(0,18);
+    var a=document.createElement('a'); a.href='#'+s.id; a.textContent=label;
+    box.appendChild(a);
   });
 })();
 </script>
